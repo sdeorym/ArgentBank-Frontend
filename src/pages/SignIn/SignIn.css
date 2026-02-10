@@ -1,0 +1,51 @@
+.signinBox {
+  box-sizing: border-box;
+  background-color: white;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  margin: 3rem auto;
+  padding: 32px;
+}
+  .sign-in-out-icon {
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .signInH1 {
+    color:#2c3e50;
+    margin: 21px auto;
+  }
+  .signInForm {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    margin-left:0px;
+    gap: 20px;
+    width: 100%;
+  }
+    .formField {
+      display: flex;
+      flex-direction: column;
+      align-self:baseline;
+      width: 100%;
+      left: 0;
+      margin-left:0px;
+    }
+    .formField label {
+      font-weight: bold;
+    }
+    .textBox {
+      height: 36.4px;
+    }
+    .checkbox {
+      display: flex;
+      flex-direction: row;
+      left: 0;
+      margin-left:0px;
+      gap: 4px;
+      width: 100%;
+    }
+    .signInButton {
+      width: 100%;
+    }

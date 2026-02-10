@@ -1,0 +1,32 @@
+.bankOperations {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  border: 1px solid black;
+  background-color: #fff; 
+  margin: 0 auto; 
+  padding: 1.5rem;
+  box-sizing: border-box;
+  margin-bottom: 2rem;     
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.leftie {
+  text-align: left;
+  left: 0;
+}
+.account-amount {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.welcome {
+  color: #FFF;
+}
+.header {
+  padding: 21px 0;
+}
