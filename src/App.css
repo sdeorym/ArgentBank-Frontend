@@ -10,7 +10,7 @@
 body {
   margin: 0;
   height: 100vh;
-  overflow-x: hidden;
+  width: 1536px;
 }
 footer {
   width: 100vw;

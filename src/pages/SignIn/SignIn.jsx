@@ -7,7 +7,7 @@ import './SignIn.css'
 function SignIn() {
 
   return (
-    <section className="user-area">
+    <section className="display-area">
       <div className="signinBox">
         <div className="signInHead">
           <FontAwesomeIcon icon={faCircleUser} className="sign-in-out-icon" />        

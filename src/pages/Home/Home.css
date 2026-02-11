@@ -16,17 +16,41 @@
     z-index: 100;
     color: #2c3e50;
     font-size: 1.2rem;
-    text-align:left;
+    text-align:start;
 }
 .promotion-title {
     font-weight: bold;
     margin: 0;
 }
 .traits {
-    bottom: 0;
+    margin: 0;
     width: 100%;
     display: flex;
     flex-direction: row;
     position: absolute;
-    gap: 10%;
+    justify-content: space-around;
+    top: 57.5%;
+    background-color: #FFF;
+}
+.kakemono {
+    width: 512px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    color: #2c3e50;
+    align-content: center;
+}
+.kakemono img {
+    width: 150px;
+    height: 150px;
+    border: 10px solid #00bc77;
+    border-radius: 50%;
+    padding: 1rem auto;
+}
+.k-title {
+    color: #222;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
 }
