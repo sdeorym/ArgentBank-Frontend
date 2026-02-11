@@ -54,14 +54,4 @@ button {
   .signInText {
     padding-left: 3px;
   }
-/* Shared by User & SignIn */
-.user-area {
-  background-color: #12002b;
-  color: #FFF;
-  padding-bottom: 1rem;
-  box-sizing: border-box;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-}
 

@@ -1,8 +1,11 @@
 .hero {
     width: 100vw;
-    min-height: 100vh;
     position: relative;
     top: 0;
+    overflow-x: hidden;
+}
+.hero img {
+    width: 1536px;
 }
 .promotion {
     position: absolute;
@@ -16,41 +19,56 @@
     z-index: 100;
     color: #2c3e50;
     font-size: 1.2rem;
-    text-align:start;
 }
 .promotion-title {
     font-weight: bold;
     margin: 0;
+    font-size: 1.5rem;    
 }
+.promotion-title, .promotion-text {
+    text-align:left;
+}
+.promotion-text {
+    font-size: 1.2rem;
+}
+
 .traits {
-    margin: 0;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     position: absolute;
     justify-content: space-around;
-    top: 57.5%;
+    top: 40%;
+    height: 60%;
     background-color: #FFF;
+    left:0;
+    right: 0;
+    box-sizing: border-box;
 }
 .kakemono {
-    width: 512px;
+    width: 100%;
     padding: 40px;
     display: flex;
     flex-direction: column;
     background-color: #FFF;
     color: #2c3e50;
     align-content: center;
+    text-align:center;
 }
 .kakemono img {
     width: 150px;
     height: 150px;
     border: 10px solid #00bc77;
     border-radius: 50%;
-    padding: 1rem auto;
+    align-self: center;
 }
 .k-title {
+    width: 100%;
     color: #222;
-    font-size: 1.25rem;
     font-weight: bold;
+    font-size: 1.2rem;  
     margin: 0.5rem 0;
+}
+.kakemono p {
+    width: 100%;
 }
