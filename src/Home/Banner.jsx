@@ -1,4 +1,4 @@
-import bankTree from "../assets/images/bank-tree.jpeg"
+import bankTree from "../assets/images/bank-tree.avif"
 import Add from './Add';
 
 function Banner() {

@@ -1,5 +1,5 @@
 .hero {
-    width: 100vw;
+    width: 100%;
     position: relative;
     top: 0;
     overflow-x: hidden;
@@ -14,8 +14,8 @@
     width: 300px;
     height: auto;
     background-color: #FFF;
-    padding: 32px;
-    margin: 32px;
+    padding: 2.5rem;
+    margin: 2.5rem;
     z-index: 100;
     color: #2c3e50;
     font-size: 1.2rem;
@@ -31,29 +31,30 @@
 .promotion-text {
     font-size: 1.2rem;
 }
-
 .traits {
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    justify-content: space-around;
-    top: 40%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    top: 60%;
     height: 60%;
     background-color: #FFF;
     left:0;
     right: 0;
     box-sizing: border-box;
+    margin-top: -57vh;
 }
 .kakemono {
-    width: 100%;
+    flex-grow: 1;
+    flex-basis: 0; 
     padding: 40px;
-    display: flex;
-    flex-direction: column;
+    min-width: 0;
     background-color: #FFF;
-    color: #2c3e50;
+    color: #222;
     align-content: center;
     text-align:center;
+    box-sizing: border-box;
+    gap: 1rem;
+    font-size: 20px;
 }
 .kakemono img {
     width: 150px;
@@ -61,13 +62,11 @@
     border: 10px solid #00bc77;
     border-radius: 50%;
     align-self: center;
+    padding: 1rem;
 }
 .k-title {
-    width: 100%;
-    color: #222;
     font-weight: bold;
-    font-size: 1.2rem;  
-    margin: 0.5rem 0;
+    margin: 1rem 0;
 }
 .kakemono p {
     width: 100%;

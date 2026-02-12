@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from '../../img/argentBankLogo.png'
+import logo from '../assets/images/argentBankLogo.avif'
 
 function Logo() {
 
