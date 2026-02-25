@@ -1,4 +1,4 @@
-import Button from '../General/Button.jsx';
+import Button from '../general/Button.jsx';
 
 function AccountBalance({concept, movement, amount, balance}) {
 

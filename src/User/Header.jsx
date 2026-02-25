@@ -1,4 +1,4 @@
-import Button from '../General/Button';
+import Button from '../general/Button';
 
 function Header() {
 // classname={"editButton"}

@@ -1,7 +1,7 @@
 import Logo from './Logo.jsx';
 import Login from './Login.jsx';
 import Logout from './Logout.jsx';
-import User from './User.jsx';
+import UserLogo from './UserLogo.jsx';
 
 function Navbar({name}) {
 
@@ -10,7 +10,7 @@ function Navbar({name}) {
       <div className="navigation-bar">
         <Logo />
         <div className="logInIcons">
-          <User name={name}/>
+          <UserLogo name={name}/>
           <Logout />
           <Login />
         </div>

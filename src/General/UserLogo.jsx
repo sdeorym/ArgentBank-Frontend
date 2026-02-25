@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
 
-function User({name}) {
+function UserLogo({name}) {
 
 // In time, "Name" will be replaced by {Name}
 
@@ -18,4 +18,4 @@ function User({name}) {
   )
 }
 
-export default User
+export default UserLogo

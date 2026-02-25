@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import TextField from './TextField.jsx';
 import CheckBox from './CheckBox.jsx';
-import Button from '../General/Button.jsx';
+import Button from '../general/Button.jsx';
 
 function Form() {
   const formInfo = [
