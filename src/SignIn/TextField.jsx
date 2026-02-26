@@ -1,10 +1,10 @@
-function TextField({id, type, label}) {
+function TextField({id, type, label, onChange}) {
 
   return (
     <>
       <div className="formField">
-        <label for={id}>{label}</label>
-        <input type={type} id={id} className="textBox" />
+        <label htmlFor={id}>{label}</label>
+        <input type={type} id={id} onChange={onChange} className="textBox" required />
       </div>
     </>
   )

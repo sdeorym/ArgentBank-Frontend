@@ -1,8 +1,8 @@
-function Button({classname, content}) {
+function Button({classname, content, buttonType}) {
 
   return (
     <>
-        <button className={classname}>{content}</button>
+        <button className={classname} type={buttonType}>{content}</button>
     </>
   )
 }

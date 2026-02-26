@@ -48,6 +48,8 @@
     }
     .textBox {
       height: 36.4px;
+      text-align: left;
+      padding-left: 2.5%;
     }
     .checkbox {
       display: flex;

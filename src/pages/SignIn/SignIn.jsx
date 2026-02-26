@@ -6,6 +6,7 @@ import './SignIn.css'
 
 function SignIn() {
 
+  const handleLoginSubmit = (formData) => {console.log("Datos recibidos:", formData)}
   return (
     <section className="display-area">
       <div className="signinBox">
@@ -13,7 +14,7 @@ function SignIn() {
           <FontAwesomeIcon icon={faCircleUser} className="sign-in-out-icon" />        
           <Head />
         </div>
-        <Form />        
+        <Form onSubmit={handleLoginSubmit}/>        
       </div>      
     </section>
   )
