@@ -4,7 +4,7 @@ function CheckBox(id, type, label) {
     <div>
       <span className="checkbox">
         <input type="checkbox" id="remember me" />
-        <label for="remember me">Remember me</label>
+        <label htmlFor="remember me">Remember me</label>
       </span>
     </div>
   )

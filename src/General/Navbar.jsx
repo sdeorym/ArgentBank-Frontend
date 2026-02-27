@@ -10,7 +10,7 @@ function Navbar({name}) {
       <div className="navigation-bar">
         <Logo />
         <div className="logInIcons">
-          <UserLogo name={name}/>
+          <UserLogo />
           <Logout />
           <Login />
         </div>

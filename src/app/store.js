@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit"
-// import { signInSlice } from "../pages/SignIn/signInSlice";
-// import  { userSlice } from "../pages/User/userSlice";
+import signInReducer from "../pages/SignIn/signInSlice"
 
-
-const dummyReducer = (state = {}) => state
-
-export const store = configureStore({reducer: {dummy: dummyReducer}})
+export const store = configureStore({
+  reducer: {
+    user: signInReducer
+  }
+})

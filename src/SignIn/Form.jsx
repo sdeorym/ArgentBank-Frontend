@@ -26,7 +26,6 @@ function Form({onSubmit}) {
       "onChange": (e) => setFormData({...formData, exquisitField: e.target.value})
     }
   ]
-  console.log(formData);
 
   return (
     <>  

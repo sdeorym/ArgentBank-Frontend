@@ -1,3 +1,4 @@
+import { useSelector, useDispatch } from "react-redux"
 import { Outlet } from "react-router-dom";
 import Navbar from './general/Navbar';
 import Footer from './general/Footer';
@@ -7,9 +8,11 @@ import User from './pages/User/User';
 import './App.css'
 
 function App() {
+ //const userName = useSelector(state => state.profile.userName)
+
   return (
     <>        
-      <Navbar name="Cuchimilitangas" /> {/* Este nombre lo importamos de la API */}
+      <Navbar /> {/* Este nombre lo importamos de la API */}
       <Outlet />
       <Footer />
     </>
