@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux"
 import Logo from './Logo.jsx';
 import Login from './Login.jsx';
 import Logout from './Logout.jsx';
@@ -10,9 +11,10 @@ function Navbar({name}) {
       <div className="navigation-bar">
         <Logo />
         <div className="logInIcons">
-          <UserLogo />
-          <Logout />
-          <Login />
+          { (name != null) ? 
+            (<><UserLogo name={name}/>
+                <Logout /></>):
+            <><Login /></>}               
         </div>
       </div>
     </>

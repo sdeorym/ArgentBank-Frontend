@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleUser } from '@fortawesome/free-solid-svg-icons'
 import { useEffect } from 'react'
@@ -8,14 +9,15 @@ import Form from '../../SignIn/Form.jsx';
 import './SignIn.css'
 
 function SignIn() {
+  const navigate = useNavigate()
   const dispatch = useDispatch()
   const handleLoginSubmit = (formData) => {dispatch(loginThunk(formData))}
   const token = useSelector(state => state.user.token)
 
   useEffect(() => {
     if (token != null) {
-      console.log("Entra en el if del useEffect", token)
-      dispatch(userDataThunk(token))
+      navigate('/user', {replace: true})
+      dispatch(userDataThunk(token))      
     }
   }, [token])
 

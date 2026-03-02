@@ -8,11 +8,11 @@ import User from './pages/User/User';
 import './App.css'
 
 function App() {
- //const userName = useSelector(state => state.profile.userName)
+  const userName = useSelector(state => state.user.profile?.userName)
 
   return (
     <>        
-      <Navbar /> {/* Este nombre lo importamos de la API */}
+      <Navbar name={userName}/> 
       <Outlet />
       <Footer />
     </>

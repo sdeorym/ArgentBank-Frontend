@@ -35,7 +35,6 @@ export const userDataThunk = createAsyncThunk(
     return data
   }
 )
-
 const signInSlice = createSlice({
     name:"user",
     initialState: {
@@ -59,12 +58,17 @@ const signInSlice = createSlice({
         { 
           state.profile = action.payload.body
           state.status = "succeeded"
-
-        },
+        },        
+      )
+        builder.addCase("user/logout", (state, action) => 
+          {
+            state.token = null
+            state.profile = null
+            state.status = "succeeded"
+          }
       )
     }
 
 })
-
 
 export default signInSlice.reducer

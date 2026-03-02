@@ -1,8 +1,11 @@
+import { useSelector, useDispatch } from "react-redux"
 import Header from '../../User/Header.jsx';
 import AccountBalance from '../../User/AccountBalance.jsx';
 import './User.css'
 
 function User() {
+  const userName = useSelector(state => state.user.profile?.userName)
+
 const bankSeats = [
   {
     "id": "0",
@@ -30,7 +33,7 @@ const bankSeats = [
 
   return (
     <section className="user-area">
-      <Header />
+      <Header name={userName}/>
       {bankSeats.map((bankSeats) => 
         <div key={bankSeats.id} className="bankOperations">
           <AccountBalance 

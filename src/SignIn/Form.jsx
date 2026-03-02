@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useSelector } from "react-redux"
 import TextField from './TextField.jsx';
 import CheckBox from './CheckBox.jsx';
 import Button from '../general/Button.jsx';
 
 function Form({onSubmit}) {
   const [formData, setFormData] = useState({nameField: '', exquisitField: ''});
+  const token = useSelector(state => state.user.token)
 
   const handleSubmit = (e) => {
     e.preventDefault()
