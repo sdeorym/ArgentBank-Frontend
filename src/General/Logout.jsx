@@ -1,11 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
 
 function Logout() {
+    const navigate = useNavigate()
     const dispatch = useDispatch()
-    const handleLogoutSubmit = () => {dispatch({type: "user/logout", payload : null})}
+    const handleLogoutSubmit = () => {
+      navigate('/', {replace: true})
+      dispatch({type: "user/logout", payload : null})
+    }
 
   return (
     <>

@@ -21,6 +21,17 @@ function SignIn() {
     }
   }, [token])
 
+  const formLabels = [
+    {
+      "id": "username",
+      "type":"text"
+    },
+    {
+      "id": "password",
+      "type":"password"
+    }
+  ]
+
   return (
     <section className="display-area">
       <div className="signinBox">
@@ -28,7 +39,7 @@ function SignIn() {
           <FontAwesomeIcon icon={faCircleUser} className="sign-in-out-icon" />        
           <Head />
         </div>
-        <Form onSubmit={handleLoginSubmit}/>        
+        <Form onSubmit={handleLoginSubmit} formLabels = {formLabels} />        
       </div>      
     </section>
   )

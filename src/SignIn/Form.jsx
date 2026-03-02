@@ -5,9 +5,10 @@ import TextField from './TextField.jsx';
 import CheckBox from './CheckBox.jsx';
 import Button from '../general/Button.jsx';
 
-function Form({onSubmit}) {
+function Form({onSubmit, formLabels}) {
   const [formData, setFormData] = useState({nameField: '', exquisitField: ''});
   const token = useSelector(state => state.user.token)
+  console.log(formLabels[0], formLabels[1])
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -16,15 +17,15 @@ function Form({onSubmit}) {
 
   const formInfo = [
     {
-      "id": "username",
-      "type":"text",
-      "label": "Username",
+      "id": formLabels[0].id,
+      "type": formLabels[0].type,
+      "label": formLabels[0].label,
       "onChange": (e) => setFormData({...formData, nameField: e.target.value})
     },
     {
-      "id": "password",
-      "type":"password",
-      "label": "Password",
+      "id": formLabels[1].id,
+      "type":formLabels[1].type,
+      "label": formLabels[1].label,
       "onChange": (e) => setFormData({...formData, exquisitField: e.target.value})
     }
   ]
