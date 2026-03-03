@@ -5,6 +5,7 @@ import Footer from './general/Footer';
 import Home from './pages/Home/Home';
 import SignIn from './pages/SignIn/SignIn';
 import User from './pages/User/User';
+import EditUser from './pages/EditUser/EditUser';
 import './App.css'
 
 function App() {

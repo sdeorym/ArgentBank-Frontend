@@ -1,4 +1,4 @@
-function CheckBox(id, type, label) {
+function CheckBox() {
 
   return (
     <div>

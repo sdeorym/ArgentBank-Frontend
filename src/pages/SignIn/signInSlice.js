@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
+import { store } from "../../app/store.js"
 
 export const loginThunk = createAsyncThunk(
   "user/login",
@@ -35,6 +36,28 @@ export const userDataThunk = createAsyncThunk(
     return data
   }
 )
+
+export const userNameEditThunk = createAsyncThunk (
+  "user/profile",
+  async (formData) => {
+    const x = store.getState();
+    const token = tokenSelector(store.getState())
+    const response = await fetch("http://localhost:3001/api/v1/user/profile", {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`
+      },
+      body: JSON.stringify(
+        {userName: formData.exquisitField})
+    })
+    const data = await response.json()
+    return data
+  }
+)
+
+export const tokenSelector = (state) => state.user.token
+
 const signInSlice = createSlice({
     name:"user",
     initialState: {
@@ -60,6 +83,12 @@ const signInSlice = createSlice({
           state.status = "succeeded"
         },        
       )
+        /*builder.addCase(userNameEditThunk.fulfilled, (state, action) =>
+          {
+            state.status = "succeeded"
+            state.profile.userName = action.payload.userName
+          }
+      )*/
         builder.addCase("user/logout", (state, action) => 
           {
             state.token = null
@@ -67,6 +96,7 @@ const signInSlice = createSlice({
             state.status = "succeeded"
           }
       )
+        
     }
 
 })

@@ -8,6 +8,7 @@ import App from './App';
 import Home from './pages/Home/Home.jsx';
 import SignIn from './pages/SignIn/SignIn.jsx';
 import User from './pages/User/User.jsx';
+import EditUser from './pages/EditUser/EditUser';
 
 const router = createBrowserRouter([
   {
@@ -15,7 +16,8 @@ const router = createBrowserRouter([
     children: [
       {index: true, element: <Home />},
       {path: "sign-in", element: <SignIn />},
-      {path: "user", element: <User />,}
+      {path: "user", element: <User />},
+      {path: "user/edit", element: <EditUser />},
     ],
   },
 ]);

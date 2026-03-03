@@ -44,7 +44,8 @@
     .formField label {
       font-weight: bold;
       left: 0;
-      width: 25%;
+      width: 100%;
+      text-align: left;
     }
     .textBox {
       height: 36.4px;

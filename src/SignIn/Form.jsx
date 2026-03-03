@@ -1,14 +1,12 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useSelector } from "react-redux"
 import TextField from './TextField.jsx';
 import CheckBox from './CheckBox.jsx';
 import Button from '../general/Button.jsx';
 
-function Form({onSubmit, formLabels}) {
+function Form({onSubmit, formLabels, showCheckBox, section}) {
   const [formData, setFormData] = useState({nameField: '', exquisitField: ''});
   const token = useSelector(state => state.user.token)
-  console.log(formLabels[0], formLabels[1])
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -39,8 +37,8 @@ function Form({onSubmit, formLabels}) {
               <TextField id={info.id} type={info.type} label={info.label} onChange={info.onChange} />
             </div>
           )}
-          <CheckBox />
-          <Button content="Sign In" classname="signInButton" buttonType="send" />
+          {showCheckBox && <CheckBox />}
+          <Button content={section} classname="signInButton" buttonType="send" />
         </form>      
       </div>
     </>

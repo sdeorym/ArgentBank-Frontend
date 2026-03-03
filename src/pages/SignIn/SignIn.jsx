@@ -13,7 +13,7 @@ function SignIn() {
   const dispatch = useDispatch()
   const handleLoginSubmit = (formData) => {dispatch(loginThunk(formData))}
   const token = useSelector(state => state.user.token)
-
+  const showCheckBox = true;
   useEffect(() => {
     if (token != null) {
       navigate('/user', {replace: true})
@@ -24,11 +24,13 @@ function SignIn() {
   const formLabels = [
     {
       "id": "username",
-      "type":"text"
+      "type":"text",
+      "label": "Username"
     },
     {
       "id": "password",
-      "type":"password"
+      "type":"password",
+      "label": "Password"
     }
   ]
 
@@ -37,9 +39,9 @@ function SignIn() {
       <div className="signinBox">
         <div className="signInHead">
           <FontAwesomeIcon icon={faCircleUser} className="sign-in-out-icon" />        
-          <Head />
+          <Head title="Sign In" />
         </div>
-        <Form onSubmit={handleLoginSubmit} formLabels = {formLabels} />        
+        <Form onSubmit={handleLoginSubmit} formLabels = {formLabels} showCheckBox = {showCheckBox} section="Sign In" />        
       </div>      
     </section>
   )

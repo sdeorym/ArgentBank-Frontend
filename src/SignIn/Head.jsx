@@ -1,7 +1,7 @@
-function Head() {
+function Head({title}) {
   return (
     <>
-      <h1 className="signInH1">Sign In</h1>
+      <h1 className="signInH1">{title}</h1>
     </>
   )
 }
