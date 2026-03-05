@@ -5,7 +5,7 @@ import CheckBox from './CheckBox.jsx';
 import Button from '../general/Button.jsx';
 
 function Form({onSubmit, formLabels, showCheckBox, section}) {
-  const [formData, setFormData] = useState({nameField: '', exquisitField: ''});
+  const [formData, setFormData] = useState({nameField: '', passwordField: ''});
   const token = useSelector(state => state.user.token)
 
   const handleSubmit = (e) => {
@@ -13,28 +13,13 @@ function Form({onSubmit, formLabels, showCheckBox, section}) {
     onSubmit(formData)
   }
 
-  const formInfo = [
-    {
-      "id": formLabels[0].id,
-      "type": formLabels[0].type,
-      "label": formLabels[0].label,
-      "onChange": (e) => setFormData({...formData, nameField: e.target.value})
-    },
-    {
-      "id": formLabels[1].id,
-      "type":formLabels[1].type,
-      "label": formLabels[1].label,
-      "onChange": (e) => setFormData({...formData, exquisitField: e.target.value})
-    }
-  ]
-
   return (
     <>  
       <div className="signInForm">
         <form onSubmit={handleSubmit}>
-          {formInfo.map((info) =>
+          {formLabels.map((info) =>
             <div key={info.id} className="formLabels">
-              <TextField id={info.id} type={info.type} label={info.label} onChange={info.onChange} />
+              {<TextField id={info.id} type={info.type} label={info.label} onChange={(e) => setFormData({...formData, [info.fieldValue]: e.target.value})} classname={info.onChange} placeholder={info.placeholder} required={info.required} disabled={info.disabled} />}
             </div>
           )}
           {showCheckBox && <CheckBox />}

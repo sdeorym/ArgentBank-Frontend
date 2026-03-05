@@ -13,7 +13,7 @@ export const loginThunk = createAsyncThunk(
       body: JSON.stringify(
         {
           email: formData.nameField,
-          password: formData.exquisitField
+          password: formData.passwordField
       }
     )
     })
@@ -49,7 +49,7 @@ export const userNameEditThunk = createAsyncThunk (
         "Authorization": `Bearer ${token}`
       },
       body: JSON.stringify(
-        {userName: formData.exquisitField})
+        {userName: formData.nameField})
     })
     const data = await response.json()
     return data

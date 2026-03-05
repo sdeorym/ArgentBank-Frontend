@@ -52,6 +52,12 @@
       text-align: left;
       padding-left: 2.5%;
     }
+    .textBox:disabled {
+      background-color: #CCC;
+    }
+    .hideMe {
+      display: none;
+    }
     .checkbox {
       display: flex;
       flex-direction: row;

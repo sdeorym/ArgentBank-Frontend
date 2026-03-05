@@ -25,12 +25,20 @@ function SignIn() {
     {
       "id": "username",
       "type":"text",
-      "label": "Username"
+      "label": "Username",
+      "disabled": false,
+      "className": "",
+      "required": true,
+      "fieldValue": "nameField" 
     },
     {
       "id": "password",
       "type":"password",
-      "label": "Password"
+      "label": "Password",
+      "disabled": false,
+      "className": "",
+      "required": true,
+      "fieldValue": "passwordField"
     }
   ]
 
