@@ -1,4 +1,6 @@
 import { useSelector, useDispatch } from "react-redux"
+import { userDataThunk, keepToken } from "./pages/SignIn/signInSlice.js"
+import { useEffect } from 'react'
 import { Outlet } from "react-router-dom";
 import Navbar from './general/Navbar';
 import Footer from './general/Footer';
@@ -9,6 +11,13 @@ import EditUser from './pages/EditUser/EditUser';
 import './App.css'
 
 function App() {
+  const dispatch = useDispatch()
+  const token = localStorage.getItem('token');
+  useEffect(() => {
+      if (token != null) {
+        dispatch(userDataThunk(token));  
+      }
+    }, [token])
   const userName = useSelector(state => state.user.profile?.userName)
 
   return (

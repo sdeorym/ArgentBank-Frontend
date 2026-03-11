@@ -5,7 +5,7 @@ import Logout from './Logout.jsx';
 import UserLogo from './UserLogo.jsx';
 
 function Navbar({name}) {
-
+  const logability = localStorage.getItem('token');
   return (
     <>
       <div className="navigation-bar">

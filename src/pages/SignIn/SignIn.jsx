@@ -1,14 +1,15 @@
 import { useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleUser } from '@fortawesome/free-solid-svg-icons'
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from "react-redux"
-import { loginThunk, userDataThunk } from "./signInSlice"
+import { loginThunk, userDataThunk, keepToken } from "./signInSlice"
 import Head from '../../SignIn/Head.jsx';
 import Form from '../../SignIn/Form.jsx';
 import './SignIn.css'
 
 function SignIn() {
+  const [check, setCheck] = useState(false);
   const navigate = useNavigate()
   const dispatch = useDispatch()
   const handleLoginSubmit = (formData) => {dispatch(loginThunk(formData))}
@@ -17,14 +18,16 @@ function SignIn() {
   useEffect(() => {
     if (token != null) {
       navigate('/user', {replace: true})
-      dispatch(userDataThunk(token))      
+      dispatch(userDataThunk(token))
+      localStorage.setItem('token', token);
+      dispatch(keepToken(token));  
     }
   }, [token])
 
   const formLabels = [
     {
       "id": "username",
-      "type":"text",
+      "type":"email",
       "label": "Username",
       "disabled": false,
       "className": "",
@@ -49,7 +52,7 @@ function SignIn() {
           <FontAwesomeIcon icon={faCircleUser} className="sign-in-out-icon" />        
           <Head title="Sign In" />
         </div>
-        <Form onSubmit={handleLoginSubmit} formLabels = {formLabels} showCheckBox = {showCheckBox} section="Sign In" />        
+        <Form onSubmit={handleLoginSubmit} formLabels = {formLabels} showCheckBox = {showCheckBox} section="Sign In" check={check} setCheck={setCheck} />        
       </div>      
     </section>
   )

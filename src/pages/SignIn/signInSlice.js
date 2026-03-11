@@ -70,7 +70,10 @@ const signInSlice = createSlice({
         status: "idle",
         error: null
     },
-    reducers: {},
+    reducers: {
+      keepToken:(state, action) => {
+        state.token = action.payload}
+    },
     extraReducers: (builder) => {
         builder.addCase(loginThunk.fulfilled, (state, action) => {
           state.token = action.payload.body.token
@@ -83,22 +86,16 @@ const signInSlice = createSlice({
           state.status = "succeeded"
         },        
       )
-        /*builder.addCase(userNameEditThunk.fulfilled, (state, action) =>
-          {
-            state.status = "succeeded"
-            state.profile.userName = action.payload.userName
-          }
-      )*/
         builder.addCase("user/logout", (state, action) => 
           {
             state.token = null
             state.profile = null
             state.status = "succeeded"
           }
-      )
-        
+      )        
     }
 
 })
 
+export const { keepToken } = signInSlice.actions;
 export default signInSlice.reducer

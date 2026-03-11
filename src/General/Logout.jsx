@@ -9,6 +9,7 @@ function Logout() {
     const handleLogoutSubmit = () => {
       navigate('/', {replace: true})
       dispatch({type: "user/logout", payload : null})
+      localStorage.removeItem("token");
     }
 
   return (
