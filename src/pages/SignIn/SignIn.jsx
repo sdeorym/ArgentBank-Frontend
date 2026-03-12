@@ -20,7 +20,7 @@ function SignIn() {
       navigate('/user', {replace: true})
       dispatch(userDataThunk(token))
       localStorage.setItem('token', token);
-      dispatch(keepToken(token));  
+      dispatch(userDataThunk(token));  
     }
   }, [token])
 

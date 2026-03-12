@@ -71,8 +71,6 @@ const signInSlice = createSlice({
         error: null
     },
     reducers: {
-      keepToken:(state, action) => {
-        state.token = action.payload}
     },
     extraReducers: (builder) => {
         builder.addCase(loginThunk.fulfilled, (state, action) => {
