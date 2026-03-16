@@ -39,3 +39,17 @@
 .header {
   padding: 21px 0;
 }
+
+@media (max-width: 767px) {
+  .bankOperations {
+    width: 90%;
+    padding: .75rem;
+    font-size: 0.7rem;
+  }
+  .account-amount {
+    font-size: 1.5rem;
+  }
+  .welcome {
+    font-size: 1.75rem;
+  }
+}

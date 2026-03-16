@@ -55,3 +55,21 @@ button {
     padding-left: 3px;
   }
 
+@media (max-width: 767px) {
+  body {
+    width: 100vw;
+  }
+  .navigation-bar {
+    padding: 5px 5px;
+  }
+  .logInIcons {
+    padding: 0px 5px;
+  }
+  .logo-image {
+    width: 150px;
+    height: 40.5px;
+  }
+  .signInLink,.signInText {
+    font-size: 0.9rem;
+  }
+}

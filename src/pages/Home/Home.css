@@ -18,7 +18,6 @@
     margin: 2.5rem;
     z-index: 100;
     color: #2c3e50;
-    font-size: 1.2rem;
 }
 .promotion-title {
     font-weight: bold;
@@ -70,4 +69,32 @@
 }
 .kakemono p {
     width: 100%;
+}
+
+@media (max-width: 767px) {
+    .promotion {
+        top: 25px;
+        right: 5%;
+        width: 70%;
+        padding: 1.25rem;
+        margin: 1.25rem;
+    }
+    .promotion-title {
+        font-size: 1.2rem;    
+    }
+    .promotion-text {
+        font-size: 0.9rem;    
+    }
+    .traits {
+        grid-template-columns: 1fr;
+    }
+    .kakemono img {
+        width: 75px;
+        height: 75px;
+        align-self: center;
+        padding: 0.5rem;
+    }
+    .kakemono {
+        font-size: 1rem;
+    }
 }
