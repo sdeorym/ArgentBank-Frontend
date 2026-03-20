@@ -19,8 +19,9 @@ function SignIn() {
     if (token != null) {
       navigate('/user', {replace: true})
       dispatch(userDataThunk(token))
-      localStorage.setItem('token', token);
-      dispatch(userDataThunk(token));  
+      if (check != false) {
+        localStorage.setItem('token', token);
+        dispatch(userDataThunk(token));}  
     }
   }, [token])
 

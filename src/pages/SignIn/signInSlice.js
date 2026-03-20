@@ -38,10 +38,9 @@ export const userDataThunk = createAsyncThunk(
 )
 
 export const userNameEditThunk = createAsyncThunk (
-  "user/profile",
-  async (formData) => {
-    const x = store.getState();
-    const token = tokenSelector(store.getState())
+  "user/editUserName",
+  async (formData, {getState}) => {
+    const token = tokenSelector(getState())
     const response = await fetch("http://localhost:3001/api/v1/user/profile", {
       method: "PUT",
       headers: {
@@ -83,6 +82,13 @@ const signInSlice = createSlice({
           state.profile = action.payload.body
           state.status = "succeeded"
         },        
+      )
+        builder.addCase(userNameEditThunk.fulfilled, (state, action) =>
+          {state.profile = {
+            ...state.profile, userName: action.payload.body.userName
+          };
+            state.status = "succeeded"
+          },        
       )
         builder.addCase("user/logout", (state, action) => 
           {

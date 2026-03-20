@@ -4,8 +4,6 @@ import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
 
 function UserLogo({name}) {
 
-// In time, "Name" will be replaced by {Name}
-
   return (
     <>
       <span>
