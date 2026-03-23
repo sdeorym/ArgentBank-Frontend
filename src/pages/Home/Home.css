@@ -1,0 +1,100 @@
+.hero {
+    width: 100%;
+    position: relative;
+    top: 0;
+    overflow-x: hidden;
+}
+.hero img {
+    width: 1536px;
+}
+.promotion {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 300px;
+    height: auto;
+    background-color: #FFF;
+    padding: 2.5rem;
+    margin: 2.5rem;
+    z-index: 100;
+    color: #2c3e50;
+}
+.promotion-title {
+    font-weight: bold;
+    margin: 0;
+    font-size: 1.5rem;    
+}
+.promotion-title, .promotion-text {
+    text-align:left;
+}
+.promotion-text {
+    font-size: 1.2rem;
+}
+.traits {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    top: 60%;
+    height: 60%;
+    background-color: #FFF;
+    left:0;
+    right: 0;
+    box-sizing: border-box;
+    margin-top: -57vh;
+}
+.kakemono {
+    flex-grow: 1;
+    flex-basis: 0; 
+    padding: 40px;
+    min-width: 0;
+    background-color: #FFF;
+    color: #222;
+    align-content: center;
+    text-align:center;
+    box-sizing: border-box;
+    gap: 1rem;
+    font-size: 20px;
+}
+.kakemono img {
+    width: 150px;
+    height: 150px;
+    border: 10px solid #00bc77;
+    border-radius: 50%;
+    align-self: center;
+    padding: 1rem;
+}
+.k-title {
+    font-weight: bold;
+    margin: 1rem 0;
+}
+.kakemono p {
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .promotion {
+        top: 25px;
+        right: 5%;
+        width: 70%;
+        padding: 1.25rem;
+        margin: 1.25rem;
+    }
+    .promotion-title {
+        font-size: 1.2rem;    
+    }
+    .promotion-text {
+        font-size: 0.9rem;    
+    }
+    .traits {
+        grid-template-columns: 1fr;
+    }
+    .kakemono img {
+        width: 75px;
+        height: 75px;
+        align-self: center;
+        padding: 0.5rem;
+    }
+    .kakemono {
+        font-size: 1rem;
+    }
+}

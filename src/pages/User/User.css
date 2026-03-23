@@ -1,0 +1,55 @@
+.user-area {
+  background-color: #12002b;
+  color: #FFF;
+  padding-bottom: 1rem;
+  box-sizing: border-box;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+.bankOperations {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  border: 1px solid black;
+  background-color: #fff; 
+  margin: 0 auto; 
+  padding: 1.5rem;
+  box-sizing: border-box;
+  margin-bottom: 2rem;     
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.leftie {
+  text-align: left;
+  left: 0;
+}
+.account-amount {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.welcome {
+  color: #FFF;
+}
+.header {
+  padding: 21px 0;
+}
+
+@media (max-width: 767px) {
+  .bankOperations {
+    width: 90%;
+    padding: .75rem;
+    font-size: 0.7rem;
+  }
+  .account-amount {
+    font-size: 1.5rem;
+  }
+  .welcome {
+    font-size: 1.75rem;
+  }
+}
