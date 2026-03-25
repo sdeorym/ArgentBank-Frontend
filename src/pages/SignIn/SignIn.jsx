@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { loginThunk, userDataThunk, keepToken } from "./signInSlice"
 import Head from '../../SignIn/Head.jsx';
 import Form from '../../SignIn/Form.jsx';
+import Error from '../../SignIn/Error.jsx';
 import './SignIn.css'
 
 function SignIn() {
@@ -14,6 +15,8 @@ function SignIn() {
   const dispatch = useDispatch()
   const handleLoginSubmit = (formData) => {dispatch(loginThunk(formData))}
   const token = useSelector(state => state.user.token)
+  const status = useSelector(state => state.user.status)
+  const error = useSelector(state => state.user.error)
   const showCheckBox = true;
   useEffect(() => {
     if (token != null) {
@@ -47,14 +50,16 @@ function SignIn() {
   ]
 
   return (
-    <section className="display-area">
+    <section className="display-area">          
       <div className="signinBox">
         <div className="signInHead">
           <FontAwesomeIcon icon={faCircleUser} className="sign-in-out-icon" />        
           <Head title="Sign In" />
         </div>
+        {(status === "failed") && <Error show={true} />}
         <Form onSubmit={handleLoginSubmit} formLabels = {formLabels} showCheckBox = {showCheckBox} section="Sign In" check={check} setCheck={setCheck} />        
-      </div>      
+      </div>
+            
     </section>
   )
 }
