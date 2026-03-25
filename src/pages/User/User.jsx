@@ -1,10 +1,19 @@
 import { useSelector, useDispatch } from "react-redux"
+import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 import Header from '../../User/Header.jsx';
 import AccountBalance from '../../User/AccountBalance.jsx';
 import './User.css'
 
 function User() {
+  const navigate = useNavigate()
   const userName = useSelector(state => state.user.profile?.userName)
+  const token = useSelector(state => state.user.token)
+  useEffect(() => {
+    if (!token) {
+      navigate('/', {replace: true})}
+  } ,[!token])
+
 
 const bankSeats = [
   {

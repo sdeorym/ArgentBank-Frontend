@@ -17,7 +17,10 @@ export const loginThunk = createAsyncThunk(
       }
     )
     })
-    const data = await response.json()    
+    const data = await response.json() 
+    if (!response.ok) {
+        return rejectWithValue('There was an error, check your credentials.');
+      } 
     return data
   }
 )
@@ -75,7 +78,14 @@ const signInSlice = createSlice({
         builder.addCase(loginThunk.fulfilled, (state, action) => {
           state.token = action.payload.body.token
           state.status = "succeeded"
+          state.error = null
         },
+      )
+        builder.addCase(loginThunk.rejected, (state, action) => {
+          state.token = null
+          state.status = "failed"
+          state.error = action.payload
+        }
       )
         builder.addCase(userDataThunk.fulfilled, (state, action) =>
         { 
