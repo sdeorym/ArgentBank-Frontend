@@ -1,16 +1,12 @@
-# React + Vite
+# ArgentBank — Banking Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+Interface utilisateur d'une application bancaire avec authentification, gestion du profil et documentation des futures API bancaires avec Swagger.  
+Banking application front-end with authentication, profile management and Swagger documentation of future banking API endpoints.
 
-Currently, two official plugins are available:
+## Note
+This project requires a backend to run locally.  
+Backend repository and setup instructions not included in this repo.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Deployment
+[Voir le projet / See the project](https://argent-bank-frontend-omega.vercel.app/)
